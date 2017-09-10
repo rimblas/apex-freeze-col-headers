@@ -1,0 +1,58 @@
+/*
+BEGIN - Sticky Headers and Columns
+Based on https://jsfiddle.net/RMarsh/bzuasLcz/3/
+*/
+.jsInsumFreezeColHead table.t-Report-report {
+  position: relative;
+  /*width: 700px;*/
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+
+/*thead*/
+.jsInsumFreezeColHead table.t-Report-report thead {
+  position: relative;
+  display: block; /*seperates the header from the body allowing it to be positioned*/
+  overflow: visible;
+  /*width: 700px; set width to the container region via JS */
+}
+
+/* header shadow */
+.jsInsumFreezeColHead table.t-Report-report thead tr {
+  border-bottom: 2px solid rgba(0, 0, 0, .5);
+}
+
+
+
+.jsInsumFreezeColHead table.t-Report-report thead th:nth-child(1) {/*first cell in the header*/
+  position: relative;
+  display: block; /*seperates the first cell in the header from the header*/
+  background-color: #ffffff;  /* stop the frozen col on even rows from being transparent */
+  border-right: 1px solid rgba(0, 0, 0, .5);
+}
+
+
+/*tbody*/
+.jsInsumFreezeColHead table.t-Report-report tbody {
+  position: relative;
+  display: block; /*seperates the tbody from the header*/
+  height: 500px;  /*consider setting height to the container region via JS*/
+  overflow: scroll;
+ /*width: 700px; set width to the container region via JS */
+}
+
+
+.jsInsumFreezeColHead table.t-Report-report tbody tr td:nth-child(1) {  /*the first cell in each tr*/
+  position: relative;
+  display: block; /*seperates the first column from the tbody*/
+  border-right: 1px solid rgba(0, 0, 0, .5);
+}
+
+.jsInsumFreezeColHead .t-Report--altRowsDefault .t-Report-report tr:nth-child(even) .t-Report-cell {
+  background-color: #ffffff;  /* stop the frozen col on even rows from being transparent */
+}
+
+/*
+END - Sticky Headers and Columns
+*/
