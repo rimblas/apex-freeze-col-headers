@@ -2,7 +2,7 @@
   "name" : "Insum Freeze Headers & Column",
   "version" : "1.0.0",
   "description" : "Freeze the first column and headers of a Classic Report",
-  "keywords" : ["Classic Report", "Freeze Column", "Freeze Header"],
+  "keywords" : ["Classic Report", "Freeze Column", "Freeze Header", "Excel"],
   "homepage" : "https://github.com/rimblas/apex-freeze-col-headers",
   "bugs" : {
     "url" : "https://github.com/rimblas/apex-freeze-col-headers/issues",
@@ -26,7 +26,7 @@
       "plugin" : {
         "internalName" : "JMR.FREEZE-HEADER-COLUMN",
         "type" : "dynamic action",
-        "demo" : "https://apex.oracle.com/pls/apex/f?p=97705",
+        "demo" : "https://apex.oracle.com/pls/apex/f?p=46011:70",
         "previewImage" : "https://github.com/rimblas/apex-freeze-col-headers/raw/master/preview.gif"
       }
     }
