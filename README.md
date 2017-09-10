@@ -1,6 +1,6 @@
 # APEX Freeze Column & Headers
 
-An Oracle APEX Dynamic Action plugin for freezing the (first) column and headers of a Classic Report
+An Oracle APEX Dynamic Action plugin for freezing the (first) column and headers of a Classic Report (using the Universal Theme)
 
 
 ## Demo
@@ -14,7 +14,7 @@ An Oracle APEX Dynamic Action plugin for freezing the (first) column and headers
 1. Create an "After Refresh" Dynamic Action on the Classic Report you want to "freeze".
 2. For the True Action select "Insum Freeze Headers & Column"
 3. Make sure "Fire on Initialization" is Yes.
-4. Don't specify an affected element, the plugin uses `this.triggeringElement`
+4. Don't specify an affected element; the plugin uses `this.triggeringElement`
 
 ## FAQ
 * Can I freeze multiple reports on the same page?  YES!
