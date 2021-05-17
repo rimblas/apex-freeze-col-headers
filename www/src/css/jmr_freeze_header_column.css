@@ -18,20 +18,6 @@ Based on https://jsfiddle.net/RMarsh/bzuasLcz/3/
   /*width: 700px; set width to the container region via JS */
 }
 
-/* header shadow */
-.jsInsumFreezeColHead table.t-Report-report thead tr {
-  border-bottom: 2px solid rgba(0, 0, 0, .5);
-}
-
-
-
-.jsInsumFreezeColHead table.t-Report-report thead th:nth-child(1) {/*first cell in the header*/
-  position: relative;
-  display: block; /*seperates the first cell in the header from the header*/
-  background-color: #ffffff;  /* stop the frozen col on even rows from being transparent */
-  border-right: 1px solid rgba(0, 0, 0, .5);
-}
-
 
 /*tbody*/
 .jsInsumFreezeColHead table.t-Report-report tbody {
@@ -42,16 +28,24 @@ Based on https://jsfiddle.net/RMarsh/bzuasLcz/3/
  /*width: 700px; set width to the container region via JS */
 }
 
+.borderBottonColumn {
+  border-bottom: 2px solid rgba(0, 0, 0, .5);
+}
 
-.jsInsumFreezeColHead table.t-Report-report tbody tr td:nth-child(1) {  /*the first cell in each tr*/
+.borderRightColumn {
+  border-right: 2px solid rgba(0, 0, 0, .5) !important;
+  overflow: visible;
+}
+
+
+.freezeTd {
   position: relative;
-  display: block; /*seperates the first column from the tbody*/
-  border-right: 1px solid rgba(0, 0, 0, .5);
+  background-color: #ffffff !important;
 }
-
-.jsInsumFreezeColHead .t-Report--altRowsDefault .t-Report-report tr:nth-child(even) .t-Report-cell {
-  background-color: #ffffff;  /* stop the frozen col on even rows from being transparent */
-}
+/*
+.t-Report--altRowsDefault .t-Report-report tr:nth-child(odd) .t-Report-cell{
+  background-color: #ffffff !important;
+}*/
 
 /*
 END - Sticky Headers and Columns
