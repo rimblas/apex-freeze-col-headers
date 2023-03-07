@@ -7,7 +7,7 @@ return apex_plugin.t_dynamic_action_render_result
 is
   l_result apex_plugin.t_dynamic_action_render_result;
 
-  l_attr_default_height_ind varchar2(1)   := p_dynamic_action.attribute_01;
+  l_mode                    varchar2(10)  := p_dynamic_action.attribute_01;
   l_attr_custom_height      varchar2(100) := p_dynamic_action.attribute_02;
   l_attr_bg_color           varchar2(20)  := nvl(p_dynamic_action.attribute_03, '#FFFFF');
 
@@ -16,9 +16,17 @@ begin
   l_result.attribute_02        := nvl(l_attr_custom_height, '700px');
   l_result.attribute_03        := l_attr_bg_color;
 
+  apex_json.initialize_clob_output;
+
+  apex_json.open_object;
+  apex_json.write('mode'         , lower(l_mode)         );
+  apex_json.write('height'       , l_result.attribute_02 );
+  apex_json.write('bg_color'     , l_result.attribute_03 );
+  apex_json.close_object;
+
   l_result.javascript_function := '
     function(){
-      insumTk.freezer.coolReport(this.triggeringElement);
+      insumTk.freezer.coolReport(this.triggeringElement, ' || apex_json.get_clob_output || ');
     }';
 
     -- Set the size for ALL applicable regions after the window is resized

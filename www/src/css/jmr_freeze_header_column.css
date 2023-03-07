@@ -47,10 +47,14 @@ Based on https://jsfiddle.net/RMarsh/bzuasLcz/3/
   position: relative;
   display: block; /*seperates the first column from the tbody*/
   border-right: 1px solid rgba(0, 0, 0, .5);
+  z-index: 1;
 }
 
-.jsInsumFreezeColHead .t-Report--altRowsDefault .t-Report-report tr:nth-child(even) .t-Report-cell {
+.jsInsumFreezeColHead .t-Report--altRowsDefault .t-Report-report tr:nth-child(even) td.t-Report-cell:nth-child(1) {
   background-color: #ffffff;  /* stop the frozen col on even rows from being transparent */
+}
+.jsInsumFreezeColHead .t-Report--altRowsDefault .t-Report-report tr:nth-child(odd) td.t-Report-cell:nth-child(1) {
+  background-color: #f2f2f2;  /* stop the frozen col on even rows from being transparent */
 }
 
 /*
